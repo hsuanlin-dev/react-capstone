@@ -1,10 +1,11 @@
 import './Header.css';
+import logo from '../assets/logo.svg';
 import Nav from './Nav';
 
 function Header() {
   return (
     <header>
-      <img src="https://placehold.co/200x80?text=Little+Lemon" alt="Little Lemon logo" />
+      <img src={logo} alt="Little Lemon logo" />
       <Nav />
     </header>
   );
