@@ -1,4 +1,4 @@
-// import './CustomersSay.css';
+import './CustomersSay.css';
 
 const reviewsData = [
   {

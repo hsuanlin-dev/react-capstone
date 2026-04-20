@@ -1,0 +1,70 @@
+/* ── Chicago / About ── */
+.about {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.about-text h2 {
+  font-family: 'Markazi Text', serif;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.about-text h3 {
+  font-family: 'Markazi Text', serif;
+  font-size: 30px;
+  line-height: 1.2;
+  color: var(--secondary-salmon);
+  margin-bottom: 16px;
+}
+
+.about-text p {
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 65ch;
+  margin-bottom: 16px;
+}
+
+.about-images {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  /* enough height so the overlapping second image is visible */
+  padding-bottom: 40px;
+}
+
+.about-images img:first-child {
+  width: 90%;
+  border-radius: var(--border-radius);
+}
+
+.about-images img:last-child {
+  width: 60%;
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+  }
+
+  .about-images {
+    width: 100%;
+    min-width: unset;
+  }
+}

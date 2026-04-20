@@ -1,6 +1,6 @@
 import marioAdrian from '../assets/mario-adrian-a.jpg';
 import restaurant from '../assets/restaurant.jpg';
-// import './Chicago.css';
+import './Chicago.css';
 
 function Chicago() {
   return (

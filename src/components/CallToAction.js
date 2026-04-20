@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import restaurantFood from '../assets/restaurant-food.jpg';
-// import './CallToAction.css';
+import './CallToAction.css';
 
 function CallToAction() {
   return (
