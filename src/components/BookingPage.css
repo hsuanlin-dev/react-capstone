@@ -1,0 +1,12 @@
+.booking-page {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.booking-page h2 {
+  font-family: "Markazi Text", serif;
+  font-size: 40px;
+  color: #333333;
+  margin-bottom: 32px;
+}
