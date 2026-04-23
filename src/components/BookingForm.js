@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./BookingForm.css";
 
-function BookingForm({ availableTimes, dispatch }) {
+function BookingForm({ availableTimes, dispatch, submitForm }) {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [guests, setGuests] = useState(1);
@@ -9,7 +9,7 @@ function BookingForm({ availableTimes, dispatch }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({ date, time, guests, occasion });
+    submitForm({ date, time, guests, occasion });
   };
 
   return (
