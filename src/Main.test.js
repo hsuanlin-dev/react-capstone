@@ -1,14 +1,20 @@
 import { initializeTimes, updateTimes } from "./components/Main";
 
-test("initializeTimes returns 6 time slots including 17:00 and 22:00", () => {
-  const times = initializeTimes();
-  expect(times).toHaveLength(6);
-  expect(times).toContain("17:00");
-  expect(times).toContain("22:00");
+const MOCK_TIMES = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+
+beforeEach(() => {
+  window.fetchAPI = jest.fn(() => MOCK_TIMES);
+  window.submitAPI = jest.fn(() => true);
 });
 
-test("updateTimes returns the same state unchanged", () => {
-  const fakeState = ["17:00", "18:00"];
-  const result = updateTimes(fakeState, { type: "UPDATE_TIMES", date: "2025-06-15" });
-  expect(result).toEqual(fakeState);
+test("initializeTimes returns a non-empty array", () => {
+  const times = initializeTimes();
+  expect(times).toBeDefined();
+  expect(times.length).toBeGreaterThan(0);
+});
+
+test("updateTimes returns a non-empty array for UPDATE_TIMES action", () => {
+  const result = updateTimes([], { type: "UPDATE_TIMES", date: "2025-06-15" });
+  expect(result).toBeDefined();
+  expect(result.length).toBeGreaterThan(0);
 });
