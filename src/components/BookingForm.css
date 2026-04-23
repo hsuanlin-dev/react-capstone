@@ -44,3 +44,9 @@
 .booking-btn:hover {
   background-color: #e6bb00;
 }
+
+input[type="submit"]:disabled {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
