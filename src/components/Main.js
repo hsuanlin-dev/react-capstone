@@ -4,10 +4,15 @@ import Homepage from './Homepage';
 import BookingPage from './BookingPage';
 
 export function initializeTimes() {
-  return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+  const today = new Date();
+  return window.fetchAPI(today);
 }
 
 export function updateTimes(state, action) {
+  if (action.type === "UPDATE_TIMES") {
+    const date = new Date(action.date);
+    return window.fetchAPI(date);
+  }
   return state;
 }
 
